@@ -9,10 +9,10 @@ export function Head() {
       className="mt-5"
     >
       <motion.div className="flex items-center gap-2 justify-center max-h-[243px] transition-transform ease-in animate-girar">
-        <motion.div className="w-[13.5px] h-[243px]" variants={slideInFromLeft(0)}>
+        <motion.div className="w-[13.5px] h-[243px]" variants={slideInFromLeft(0.2)}>
           <img src="/i.png" alt="" className="mt-[70px]"/>
         </motion.div>
-        <motion.div className="w-[200px] h-[243]" variants={slideInFromRight(0)}>
+        <motion.div className="w-[200px] h-[243]" variants={slideInFromRight(0.2)}>
           <img src="DO in png.png" alt="" />
         </motion.div>
       </motion.div>

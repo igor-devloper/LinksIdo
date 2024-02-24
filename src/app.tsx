@@ -2,6 +2,7 @@ import { StarsCanvas } from './components/animation/star-background'
 import { Links } from './components/links'
 import './index.css'
 import { Head } from './components/head'
+import { Footer } from './components/footer'
 
 
 
@@ -11,6 +12,7 @@ export function App() {
       <StarsCanvas />
       <Head />
       <Links />
+      <Footer/>
     </main>
   )
 }

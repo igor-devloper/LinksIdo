@@ -7,7 +7,7 @@ import { Head } from './components/head'
 
 export function App() {
   return (
-    <main className='h-screen flex flex-col items-center bg-gray-900'>
+    <main className='h-screen flex flex-col items-center bg-gray-950'>
       <StarsCanvas />
       <Head />
       <Links />

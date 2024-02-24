@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import { Blocks, Facebook, Instagram, Linkedin } from "lucide-react"
 import { Button } from "./ui/button"
 import { slideInFromTop } from "../utils/motion"
+import { track } from "@vercel/analytics"
 
 
 
@@ -15,7 +16,11 @@ export function Links() {
     >
 
       <motion.div variants={slideInFromTop(4)}>
-        <Button className="flex items-center gap-2 p-6 w-full" variant='card'>
+        <Button onClick={() => {
+          track('Click', {
+            message: 'Um usuario clicou no Link do instagram'
+          })
+        }}  className="flex items-center gap-2 p-6 w-full" variant='card'>
           <Instagram />
           Instagram
         </Button>
@@ -24,7 +29,11 @@ export function Links() {
 
 
       <motion.div variants={slideInFromTop(4.2)}>
-        <Button className="flex items-center gap-2 p-6 w-full" variant='card'>
+        <Button onClick={() => {
+          track('Click', {
+            message: 'Um usuario clicou no Link do Site'
+          })
+        }} className="flex items-center gap-2 p-6 w-full" variant='card'>
           <Blocks />
           Site
         </Button>
@@ -32,14 +41,22 @@ export function Links() {
 
 
       <motion.div variants={slideInFromTop(4.4)}>
-        <Button className="flex items-center gap-2 p-6 w-full" variant='card'>
+        <Button onClick={() => {
+          track('Click', {
+            message: 'Um usuario clicou no Link do Linkedin'
+          })
+        }} className="flex items-center gap-2 p-6 w-full" variant='card'>
           <Linkedin />
           Linkedin
         </Button>
       </motion.div>
 
       <motion.div variants={slideInFromTop(4.6)}>
-        <Button className="flex items-center gap-2 p-6 w-full" variant='card'>
+        <Button onClick={() => {
+          track('Click', {
+            message: 'Um usuario clicou no Link do Facebook'
+          })
+        }} className="flex items-center gap-2 p-6 w-full" variant='card'>
           < Facebook />
           Facebook
         </Button>
